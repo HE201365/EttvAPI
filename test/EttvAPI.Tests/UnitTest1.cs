@@ -13,5 +13,12 @@ namespace EttvAPI.Tests
             var returnValue = controller.Get(1);
             Assert.Equal("EminjanO", returnValue.Value);
         }
+        [Fact]
+        public void Test1()
+        {
+            var returnValue = controller.Get(2);
+            Assert.Equal("EminjanO", returnValue.Value);
+        }
+    }
     }
 }
