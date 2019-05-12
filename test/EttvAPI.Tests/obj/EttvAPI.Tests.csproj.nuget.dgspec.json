@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eminjan\\source\\repos\\EttvSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj": {}
+    "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj": {
+    "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj",
+        "projectUniqueName": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj",
         "projectName": "EttvAPI",
-        "projectPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj",
+        "projectPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj",
         "packagesPath": "C:\\Users\\eminjan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\obj\\",
+        "outputPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\eminjan\\source\\repos\\EttvSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj": {
+    "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj",
         "projectName": "EttvAPI.Tests",
-        "projectPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj",
+        "projectPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\test\\EttvAPI.Tests\\EttvAPI.Tests.csproj",
         "packagesPath": "C:\\Users\\eminjan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\test\\EttvAPI.Tests\\obj\\",
+        "outputPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\test\\EttvAPI.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -93,8 +93,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj": {
-                "projectPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj"
+              "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj": {
+                "projectPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj"
               }
             }
           }

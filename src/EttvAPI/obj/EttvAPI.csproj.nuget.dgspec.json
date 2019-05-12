@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj": {}
+    "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj": {
+    "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj",
+        "projectUniqueName": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj",
         "projectName": "EttvAPI",
-        "projectPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\EttvAPI.csproj",
+        "projectPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\EttvAPI.csproj",
         "packagesPath": "C:\\Users\\eminjan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eminjan\\source\\repos\\EttvSln\\src\\EttvAPI\\obj\\",
+        "outputPath": "C:\\Users\\eminjan\\source\\repos\\ETTVSln\\src\\EttvAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
