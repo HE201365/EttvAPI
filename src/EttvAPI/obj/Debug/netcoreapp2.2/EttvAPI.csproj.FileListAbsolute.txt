@@ -1,0 +1,14 @@
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\bin\Debug\netcoreapp2.2\EttvAPI.deps.json
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\bin\Debug\netcoreapp2.2\EttvAPI.runtimeconfig.json
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\bin\Debug\netcoreapp2.2\EttvAPI.runtimeconfig.dev.json
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\bin\Debug\netcoreapp2.2\EttvAPI.dll
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\bin\Debug\netcoreapp2.2\EttvAPI.pdb
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.csprojAssemblyReference.cache
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.csproj.CoreCompileInputs.cache
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.RazorAssemblyInfo.cache
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.RazorAssemblyInfo.cs
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.AssemblyInfoInputs.cache
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.AssemblyInfo.cs
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.RazorTargetAssemblyInfo.cache
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.dll
+C:\Users\eminjan\source\repos\EttvSln\src\EttvAPI\obj\Debug\netcoreapp2.2\EttvAPI.pdb
