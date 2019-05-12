@@ -21,7 +21,7 @@ namespace EttvAPI.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "Eminjan";
+            return "EminjanO";
         }
 
         // POST api/values

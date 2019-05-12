@@ -11,7 +11,7 @@ namespace EttvAPI.Tests
         public void GetReturnsCorrectNumber()
         {
             var returnValue = controller.Get(1);
-            Assert.Equal("Eminjan", returnValue.Value);
+            Assert.Equal("EminjanO", returnValue.Value);
         }
     }
 }
