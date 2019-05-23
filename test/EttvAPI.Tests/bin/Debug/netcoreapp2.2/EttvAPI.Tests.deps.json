@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "cfa6a047301f7fbd93745dbcddbea42020f2f88c"
+    "signature": "cfb8a5de76658394e7e227f83c47e865a8b4b842"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,8 @@
       "EttvAPI.Tests/1.0.0": {
         "dependencies": {
           "EttvAPI": "1.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "2.2.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.2.4",
           "Microsoft.NET.Test.Sdk": "16.0.1",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
@@ -17,11 +19,602 @@
           "EttvAPI.Tests.dll": {}
         }
       },
+      "AutoMapper/8.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+        "dependencies": {
+          "AutoMapper": "8.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "5.0.1.0"
+          }
+        }
+      },
+      "Humanizer/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core.af": "2.6.2",
+          "Humanizer.Core.ar": "2.6.2",
+          "Humanizer.Core.bg": "2.6.2",
+          "Humanizer.Core.bn-BD": "2.6.2",
+          "Humanizer.Core.cs": "2.6.2",
+          "Humanizer.Core.da": "2.6.2",
+          "Humanizer.Core.de": "2.6.2",
+          "Humanizer.Core.el": "2.6.2",
+          "Humanizer.Core.es": "2.6.2",
+          "Humanizer.Core.fa": "2.6.2",
+          "Humanizer.Core.fi-FI": "2.6.2",
+          "Humanizer.Core.fr": "2.6.2",
+          "Humanizer.Core.fr-BE": "2.6.2",
+          "Humanizer.Core.he": "2.6.2",
+          "Humanizer.Core.hr": "2.6.2",
+          "Humanizer.Core.hu": "2.6.2",
+          "Humanizer.Core.id": "2.6.2",
+          "Humanizer.Core.it": "2.6.2",
+          "Humanizer.Core.ja": "2.6.2",
+          "Humanizer.Core.lv": "2.6.2",
+          "Humanizer.Core.ms-MY": "2.6.2",
+          "Humanizer.Core.mt": "2.6.2",
+          "Humanizer.Core.nb": "2.6.2",
+          "Humanizer.Core.nb-NO": "2.6.2",
+          "Humanizer.Core.nl": "2.6.2",
+          "Humanizer.Core.pl": "2.6.2",
+          "Humanizer.Core.pt": "2.6.2",
+          "Humanizer.Core.ro": "2.6.2",
+          "Humanizer.Core.ru": "2.6.2",
+          "Humanizer.Core.sk": "2.6.2",
+          "Humanizer.Core.sl": "2.6.2",
+          "Humanizer.Core.sr": "2.6.2",
+          "Humanizer.Core.sr-Latn": "2.6.2",
+          "Humanizer.Core.sv": "2.6.2",
+          "Humanizer.Core.tr": "2.6.2",
+          "Humanizer.Core.uk": "2.6.2",
+          "Humanizer.Core.uz-Cyrl-UZ": "2.6.2",
+          "Humanizer.Core.uz-Latn-UZ": "2.6.2",
+          "Humanizer.Core.vi": "2.6.2",
+          "Humanizer.Core.zh-CN": "2.6.2",
+          "Humanizer.Core.zh-Hans": "2.6.2",
+          "Humanizer.Core.zh-Hant": "2.6.2"
+        }
+      },
+      "Humanizer.Core/2.6.2": {
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.6.0.0",
+            "fileVersion": "2.6.2.50817"
+          }
+        }
+      },
+      "Humanizer.Core.af/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/af/Humanizer.resources.dll": {
+            "locale": "af"
+          }
+        }
+      },
+      "Humanizer.Core.ar/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/ar/Humanizer.resources.dll": {
+            "locale": "ar"
+          }
+        }
+      },
+      "Humanizer.Core.bg/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/bg/Humanizer.resources.dll": {
+            "locale": "bg"
+          }
+        }
+      },
+      "Humanizer.Core.bn-BD/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/bn-BD/Humanizer.resources.dll": {
+            "locale": "bn-BD"
+          }
+        }
+      },
+      "Humanizer.Core.cs/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/cs/Humanizer.resources.dll": {
+            "locale": "cs"
+          }
+        }
+      },
+      "Humanizer.Core.da/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/da/Humanizer.resources.dll": {
+            "locale": "da"
+          }
+        }
+      },
+      "Humanizer.Core.de/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/de/Humanizer.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
+      "Humanizer.Core.el/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/el/Humanizer.resources.dll": {
+            "locale": "el"
+          }
+        }
+      },
+      "Humanizer.Core.es/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/es/Humanizer.resources.dll": {
+            "locale": "es"
+          }
+        }
+      },
+      "Humanizer.Core.fa/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/fa/Humanizer.resources.dll": {
+            "locale": "fa"
+          }
+        }
+      },
+      "Humanizer.Core.fi-FI/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/fi-FI/Humanizer.resources.dll": {
+            "locale": "fi-FI"
+          }
+        }
+      },
+      "Humanizer.Core.fr/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/fr/Humanizer.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "Humanizer.Core.fr-BE/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/fr-BE/Humanizer.resources.dll": {
+            "locale": "fr-BE"
+          }
+        }
+      },
+      "Humanizer.Core.he/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/he/Humanizer.resources.dll": {
+            "locale": "he"
+          }
+        }
+      },
+      "Humanizer.Core.hr/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/hr/Humanizer.resources.dll": {
+            "locale": "hr"
+          }
+        }
+      },
+      "Humanizer.Core.hu/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/hu/Humanizer.resources.dll": {
+            "locale": "hu"
+          }
+        }
+      },
+      "Humanizer.Core.id/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/id/Humanizer.resources.dll": {
+            "locale": "id"
+          }
+        }
+      },
+      "Humanizer.Core.it/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/it/Humanizer.resources.dll": {
+            "locale": "it"
+          }
+        }
+      },
+      "Humanizer.Core.ja/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/ja/Humanizer.resources.dll": {
+            "locale": "ja"
+          }
+        }
+      },
+      "Humanizer.Core.lv/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/lv/Humanizer.resources.dll": {
+            "locale": "lv"
+          }
+        }
+      },
+      "Humanizer.Core.ms-MY/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/ms-MY/Humanizer.resources.dll": {
+            "locale": "ms-MY"
+          }
+        }
+      },
+      "Humanizer.Core.mt/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/mt/Humanizer.resources.dll": {
+            "locale": "mt"
+          }
+        }
+      },
+      "Humanizer.Core.nb/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/nb/Humanizer.resources.dll": {
+            "locale": "nb"
+          }
+        }
+      },
+      "Humanizer.Core.nb-NO/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/nb-NO/Humanizer.resources.dll": {
+            "locale": "nb-NO"
+          }
+        }
+      },
+      "Humanizer.Core.nl/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/nl/Humanizer.resources.dll": {
+            "locale": "nl"
+          }
+        }
+      },
+      "Humanizer.Core.pl/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/pl/Humanizer.resources.dll": {
+            "locale": "pl"
+          }
+        }
+      },
+      "Humanizer.Core.pt/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/pt/Humanizer.resources.dll": {
+            "locale": "pt"
+          }
+        }
+      },
+      "Humanizer.Core.ro/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/ro/Humanizer.resources.dll": {
+            "locale": "ro"
+          }
+        }
+      },
+      "Humanizer.Core.ru/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/ru/Humanizer.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
+      "Humanizer.Core.sk/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/sk/Humanizer.resources.dll": {
+            "locale": "sk"
+          }
+        }
+      },
+      "Humanizer.Core.sl/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/sl/Humanizer.resources.dll": {
+            "locale": "sl"
+          }
+        }
+      },
+      "Humanizer.Core.sr/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/sr/Humanizer.resources.dll": {
+            "locale": "sr"
+          }
+        }
+      },
+      "Humanizer.Core.sr-Latn/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/sr-Latn/Humanizer.resources.dll": {
+            "locale": "sr-Latn"
+          }
+        }
+      },
+      "Humanizer.Core.sv/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/sv/Humanizer.resources.dll": {
+            "locale": "sv"
+          }
+        }
+      },
+      "Humanizer.Core.tr/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/tr/Humanizer.resources.dll": {
+            "locale": "tr"
+          }
+        }
+      },
+      "Humanizer.Core.uk/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/uk/Humanizer.resources.dll": {
+            "locale": "uk"
+          }
+        }
+      },
+      "Humanizer.Core.uz-Cyrl-UZ/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/uz-Cyrl-UZ/Humanizer.resources.dll": {
+            "locale": "uz-Cyrl-UZ"
+          }
+        }
+      },
+      "Humanizer.Core.uz-Latn-UZ/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/uz-Latn-UZ/Humanizer.resources.dll": {
+            "locale": "uz-Latn-UZ"
+          }
+        }
+      },
+      "Humanizer.Core.vi/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/vi/Humanizer.resources.dll": {
+            "locale": "vi"
+          }
+        }
+      },
+      "Humanizer.Core.zh-CN/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/zh-CN/Humanizer.resources.dll": {
+            "locale": "zh-CN"
+          }
+        }
+      },
+      "Humanizer.Core.zh-Hans/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/zh-Hans/Humanizer.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Humanizer.Core.zh-Hant/2.6.2": {
+        "dependencies": {
+          "Humanizer.Core": "2.6.2"
+        },
+        "resources": {
+          "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Workspaces.Common": "2.8.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.0.62830"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.Workspaces.Common/2.8.0": {
+        "dependencies": {
+          "System.Composition": "1.0.31",
+          "System.Linq.Parallel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.Workspaces.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.0.62830"
+          }
+        }
+      },
       "Microsoft.CodeCoverage/16.0.1": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
             "assemblyVersion": "15.0.0.0",
             "fileVersion": "16.0.28223.3002"
+          }
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/2.2.4": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.12"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/2.2.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "2.2.4",
+          "Microsoft.EntityFrameworkCore.Analyzers": "2.2.4",
+          "Remotion.Linq": "2.2.0",
+          "System.Collections.Immutable": "1.5.0",
+          "System.Interactive.Async": "3.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/2.2.4": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/2.2.4": {},
+      "Microsoft.EntityFrameworkCore.InMemory/2.2.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/2.2.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite/2.2.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "2.2.4",
+          "SQLitePCLRaw.bundle_green": "1.1.12"
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/2.2.4": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "2.2.4",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
           }
         }
       },
@@ -283,7 +876,219 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "2.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.3": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "2.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.3": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "2.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/dotnet-aspnet-codegenerator-design.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.3": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "2.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.3": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "2.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.3": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "2.8.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "2.2.3",
+          "NuGet.Frameworks": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.3": {
+        "dependencies": {
+          "Microsoft.VisualStudio.Web.CodeGeneration": "2.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
+            "assemblyVersion": "2.2.3.0",
+            "fileVersion": "2.2.3.0"
+          }
+        }
+      },
       "Microsoft.Win32.Primitives/4.0.1": {},
+      "NuGet.Frameworks/4.7.0": {
+        "runtime": {
+          "lib/netstandard1.6/NuGet.Frameworks.dll": {
+            "assemblyVersion": "4.7.0.5",
+            "fileVersion": "4.7.0.5148"
+          }
+        }
+      },
+      "Remotion.Linq/2.2.0": {
+        "dependencies": {
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Remotion.Linq.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.30000"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.12": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.12",
+          "SQLitePCLRaw.lib.e_sqlite3.linux": "1.1.12",
+          "SQLitePCLRaw.lib.e_sqlite3.osx": "1.1.12",
+          "SQLitePCLRaw.lib.e_sqlite3.v110_xp": "1.1.12",
+          "SQLitePCLRaw.provider.e_sqlite3.netstandard11": "1.1.12"
+        },
+        "runtime": {
+          "lib/netcoreapp/SQLitePCLRaw.batteries_green.dll": {
+            "assemblyVersion": "1.1.12.351",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "1.1.12.351",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/1.1.12": {
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "1.1.12.351",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.linux/1.1.12": {
+        "runtimeTargets": {
+          "runtimes/alpine-x64/native/libe_sqlite3.so": {
+            "rid": "alpine-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "rid": "linux-armel",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "rid": "linux-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.osx/1.1.12": {
+        "runtimeTargets": {
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3.v110_xp/1.1.12": {
+        "runtimeTargets": {
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win8-arm/native/e_sqlite3.dll": {
+            "rid": "win8-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3.netstandard11/1.1.12": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "1.1.12"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.provider.e_sqlite3.dll": {
+            "assemblyVersion": "1.1.12.351",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Collections.Immutable/1.5.0": {},
       "System.ComponentModel/4.0.1": {},
       "System.ComponentModel.EventBasedAsync/4.0.11": {},
       "System.ComponentModel.Primitives/4.1.0": {
@@ -295,6 +1100,66 @@
         "dependencies": {
           "System.ComponentModel": "4.0.1",
           "System.ComponentModel.Primitives": "4.1.0"
+        }
+      },
+      "System.Composition/1.0.31": {
+        "dependencies": {
+          "System.Composition.AttributedModel": "1.0.31",
+          "System.Composition.Convention": "1.0.31",
+          "System.Composition.Hosting": "1.0.31",
+          "System.Composition.Runtime": "1.0.31",
+          "System.Composition.TypedParts": "1.0.31"
+        }
+      },
+      "System.Composition.AttributedModel/1.0.31": {
+        "runtime": {
+          "lib/netstandard1.0/System.Composition.AttributedModel.dll": {
+            "assemblyVersion": "1.0.31.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Composition.Convention/1.0.31": {
+        "dependencies": {
+          "System.Composition.AttributedModel": "1.0.31"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Composition.Convention.dll": {
+            "assemblyVersion": "1.0.31.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Composition.Hosting/1.0.31": {
+        "dependencies": {
+          "System.Composition.Runtime": "1.0.31"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Composition.Hosting.dll": {
+            "assemblyVersion": "1.0.31.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Composition.Runtime/1.0.31": {
+        "runtime": {
+          "lib/netstandard1.0/System.Composition.Runtime.dll": {
+            "assemblyVersion": "1.0.31.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Composition.TypedParts/1.0.31": {
+        "dependencies": {
+          "System.Composition.AttributedModel": "1.0.31",
+          "System.Composition.Hosting": "1.0.31",
+          "System.Composition.Runtime": "1.0.31"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Composition.TypedParts.dll": {
+            "assemblyVersion": "1.0.31.0",
+            "fileVersion": "4.6.24705.1"
+          }
         }
       },
       "System.Diagnostics.Process/4.1.0": {
@@ -334,6 +1199,16 @@
           }
         }
       },
+      "System.Interactive.Async/3.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Interactive.Async.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.702"
+          }
+        }
+      },
+      "System.Linq.Parallel/4.3.0": {},
+      "System.Linq.Queryable/4.0.1": {},
       "System.Runtime.Loader/4.0.0": {},
       "System.Runtime.Serialization.Json/4.0.2": {},
       "System.Threading.ThreadPool/4.0.10": {},
@@ -403,8 +1278,31 @@
         }
       },
       "EttvAPI/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.1.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "5.0.1",
+          "EttvAPI.Data": "1.0.0",
+          "EttvAPI.Repos": "1.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
+        },
         "runtime": {
           "EttvAPI.dll": {}
+        }
+      },
+      "EttvAPI.Data/1.0.0": {
+        "dependencies": {
+          "Humanizer": "2.6.2"
+        },
+        "runtime": {
+          "EttvAPI.Data.dll": {}
+        }
+      },
+      "EttvAPI.Repos/1.0.0": {
+        "dependencies": {
+          "EttvAPI.Data": "1.0.0"
+        },
+        "runtime": {
+          "EttvAPI.Repos.dll": {}
         }
       }
     }
@@ -415,12 +1313,404 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Go75WXHE7p/8CtRaxZnvVEfcSh7xpE6zx9wkgN4I1BxvlzP0hoiTLHSXDYXgv9CoxaRj4ahwzCA/iwdpvyQyOA==",
+      "path": "automapper/8.1.0",
+      "hashPath": "automapper.8.1.0.nupkg.sha512"
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7MIq6D/ax3964iHXbL1L2ldUvl6IlKp0p1GZFzr6vlIhEVyp4CgJwOpisRLvIO7dP+kDtbY3Hb9yuPNCkfyBFg==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/5.0.1",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512"
+    },
+    "Humanizer/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UKsgf/9QcZT5QuKE+Lb/+b0jn9sQNkUMHG0wbkTQOEVUihoFCLKDo04fVZignPyztyCoKx/X7RCySldxxHEeXg==",
+      "path": "humanizer/2.6.2",
+      "hashPath": "humanizer.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-17m0EzOAzzXQ387sHqGNIHSCZCrJ9nCwJoJ4jC6oCTG6KHhfbq4V9i/wSbTjNLYPbvrMPSc7MlF1f7qCZwxLdQ==",
+      "path": "humanizer.core/2.6.2",
+      "hashPath": "humanizer.core.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.af/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HBIiFC+tzaSIr8cjyX1Gdq1Wy4PnX/XeTydYS5bTpUDgpu/Kq+ppL360gI4xbiF77T6OZYF/+nV20Ml5TKzI9g==",
+      "path": "humanizer.core.af/2.6.2",
+      "hashPath": "humanizer.core.af.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.ar/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0aYmCNj7zHsY1LSOMuR+s0IQAOiYx72H1MRh4CBRecZqXhWjf4sSnG8Ih+jsfr+IoOwiERzArU6XCs7zwJIJgg==",
+      "path": "humanizer.core.ar/2.6.2",
+      "hashPath": "humanizer.core.ar.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.bg/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kMPLG4XRk5knTQZF7/+GiZ/+bRplBj70cJ1joVFFdi4NV1lAGORKkXWreeWmrekvzTvD9elpjggWhVQgu6vCGg==",
+      "path": "humanizer.core.bg/2.6.2",
+      "hashPath": "humanizer.core.bg.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.bn-BD/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z3/rv1D3m0GB6LmN1q9MfLj6Bbn6wg1ksKuH+h9Hg3K7tNR0H29uDf0hXfzf6M7dUonT1uROOoAfDr/2zedr/w==",
+      "path": "humanizer.core.bn-bd/2.6.2",
+      "hashPath": "humanizer.core.bn-bd.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.cs/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9nXoO+35nmqus7NAXNe1J4ow6qYsTA18oHtSVYJcYGKziDs86BzTRkIdAWo8TfErYt4gRol59EJDVhA2cJXFLA==",
+      "path": "humanizer.core.cs/2.6.2",
+      "hashPath": "humanizer.core.cs.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.da/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I0xxWxiOVTE9ogFEGXcAnX5eKyqt2EXnm403Y1bzS47BRz5Y1qdzVVjmU9lwMZj1t4Hm5B1FW/BeJejpNDe/Zw==",
+      "path": "humanizer.core.da/2.6.2",
+      "hashPath": "humanizer.core.da.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.de/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8uYUhWyhHspGLsoA4yiScuAohkie+ePXxs0zKAahBXN9LTtuU0vVVIp+sO/Pl/I/3jkXXfPVxQ0wahzrxWOPhA==",
+      "path": "humanizer.core.de/2.6.2",
+      "hashPath": "humanizer.core.de.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.el/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mxijX9luyrnFYc+h1s+YjoUHWE8m0uTVN4mLQG16fqwtduyMWMrp9fLtmGNDQ82JsOemg4mXiL0/uEIcOj6kQQ==",
+      "path": "humanizer.core.el/2.6.2",
+      "hashPath": "humanizer.core.el.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.es/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4L8TvHQ0kKLX3BqMcNp/HUpiLxVJ+DUGOswUhZ+MWK7bhdpJJkEfDhuLok0u07gHlbvj1s6MHXhyJwx2M2cYSw==",
+      "path": "humanizer.core.es/2.6.2",
+      "hashPath": "humanizer.core.es.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.fa/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-azu8XXTEHsrb4ZtqMCM478S3jsHvoxhPHad8MgCljxb1cKlAuc3mSlZxN2pv7feFHI25IZeFfpMo5SnCgzwZqA==",
+      "path": "humanizer.core.fa/2.6.2",
+      "hashPath": "humanizer.core.fa.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.fi-FI/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GFGVopK84mjGUuouhZeUfwcHj7M6isPXR6qbYnnKL3ajWuR2Uxwhs+hRHbo0pjpjXJW67WythdYqqm8yq5QdsA==",
+      "path": "humanizer.core.fi-fi/2.6.2",
+      "hashPath": "humanizer.core.fi-fi.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.fr/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gr0mbIwGNOSX8Z5XX8qEeVRtkCqhvJCSOx6XVIk2gqzaOrGGAXMcZZJKAEHI/WJvgGgL//X9zpi7hdHhkTydOA==",
+      "path": "humanizer.core.fr/2.6.2",
+      "hashPath": "humanizer.core.fr.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.fr-BE/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-umTQr42EVzhRKfOSj4FWBRf4sDpmia5ylJCz/wSFcv2NHrAks+2a9KN8vWxBSIsvwqx5uHl0E3D/AL32/6A7Eg==",
+      "path": "humanizer.core.fr-be/2.6.2",
+      "hashPath": "humanizer.core.fr-be.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.he/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cxwPDXOiiM5uxX+aBEaTLjfCxlLzv9rD8UMlU4I1xsAPayRGjZWe21lxFYVjgBsif5qYwqi2MMZFH6qNvHXgYA==",
+      "path": "humanizer.core.he/2.6.2",
+      "hashPath": "humanizer.core.he.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.hr/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3Ojc5GtQTh7VlziocuH4AKqIYQV30j9SxHEkbJ8rqm3BuTbzjI2G8IEpaZSIoGQxojkzXYtxevVnz/Q91lA73w==",
+      "path": "humanizer.core.hr/2.6.2",
+      "hashPath": "humanizer.core.hr.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.hu/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XeUGZK4R357ptdJMFjbDunbJL43PMe34SyCkzcwpGPzQBbxJ7gYgDipdnJtlgRQ9l9bltQV48mQXSh66xhxHqA==",
+      "path": "humanizer.core.hu/2.6.2",
+      "hashPath": "humanizer.core.hu.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.id/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rgXo4oS91CDnCNyn3tTmE53itoicUlN+BmGxKISmJoh2H/0i161hrCp1EpuD9awDaIxo5zXy8CHNt+7AHxr0Ig==",
+      "path": "humanizer.core.id/2.6.2",
+      "hashPath": "humanizer.core.id.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.it/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PjkGmaLtbEMbx6yRC5FlmWQ7p0YoaAEsj9aeAbsduhkP9TfyzjnIbM1a1R36jHpH1vG8DM1v+eVdszo1Tl4Dug==",
+      "path": "humanizer.core.it/2.6.2",
+      "hashPath": "humanizer.core.it.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.ja/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DnbGRZaQ19alFM1hXMU0iitXlErNqcZADxne6rtu9RrMhJaNgGc69TFoVKNTWZX5pAnwqqvrTtW6W8btRhHISA==",
+      "path": "humanizer.core.ja/2.6.2",
+      "hashPath": "humanizer.core.ja.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.lv/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1jdClo9Q066qx2Q6HKZYU3QVU2dATWcjyXQ1hPZMdATPmymSUMFIUWnOo/rFY75nP9iTwVUbbGRI7E6X2ENSnw==",
+      "path": "humanizer.core.lv/2.6.2",
+      "hashPath": "humanizer.core.lv.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.ms-MY/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4J2sIkEuzoxRdE88IoLHh6qnNOaRKrEbFgmjwQMm7eARLGT9XpDbBsZhr60wgsqbkSNiDbu1/7USlFSmUjNaQ==",
+      "path": "humanizer.core.ms-my/2.6.2",
+      "hashPath": "humanizer.core.ms-my.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.mt/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NaNF0/PGcMdE/Jg+iZo9w1/r+HsUxnxkjvZX7aFRrGvQwAB2diAothKdpO0H/7oBETFpBFEeLHP3TpN3Dr6k/A==",
+      "path": "humanizer.core.mt/2.6.2",
+      "hashPath": "humanizer.core.mt.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.nb/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8/jl8Aa0AeLsEbdTUIhKRuw6yi6p2IVlOKlUuduxbksoXabzn9nfDpmNHPWfV6nedn+z+iEAKCQ2cgn/7/0dfg==",
+      "path": "humanizer.core.nb/2.6.2",
+      "hashPath": "humanizer.core.nb.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.nb-NO/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hNYSfIjfZW1f9Q/4Lw98J5ZXNj/F1c8bNcLRqIwmcLnCN8jLgKwCIReSISzXH5sfKqcYTTc9jC1iHfrT/xdUkQ==",
+      "path": "humanizer.core.nb-no/2.6.2",
+      "hashPath": "humanizer.core.nb-no.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.nl/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GNsBsXP8lnW7ukd42hGsC9OnOtobetVn3obfx6JM34Gkl64yp9CF3K7ppUEt7dxrIiS4fXEq8XDe0JP/rUqmxg==",
+      "path": "humanizer.core.nl/2.6.2",
+      "hashPath": "humanizer.core.nl.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.pl/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gSTZMVB2KjfRQARqbMQa9vTO1DD5Mk5v0KTZLXYShg7/X/M0n0cN3QkDETkPcH8XJ2FstiQAqDLwlZC3Br6N2g==",
+      "path": "humanizer.core.pl/2.6.2",
+      "hashPath": "humanizer.core.pl.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.pt/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TgeRxbguw2RgGHlPRtLsNXypZvfqoSZ4k9Miua+byvM+QJfmf9aIqZh4gFCKCaKKy/8HVvWDrwPZb5BbRVZwVw==",
+      "path": "humanizer.core.pt/2.6.2",
+      "hashPath": "humanizer.core.pt.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.ro/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VYXSNBYcv0t1be/Anqd4ci0PdsqH3nvUrGF/YkuiZPTucio8TSel6sR2MC+hKVPPi4vLCkBRt+vX+wSzxfGnPQ==",
+      "path": "humanizer.core.ro/2.6.2",
+      "hashPath": "humanizer.core.ro.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.ru/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U9Psx9bvlXaK6DcW6IQdEF5fxhualkaAu8pe11tSQHnSdJnptyoilC6qKEfuu8PeJ3zuckMlorwmEjgJv4FcEw==",
+      "path": "humanizer.core.ru/2.6.2",
+      "hashPath": "humanizer.core.ru.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.sk/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G2HqimXCJs0IvJFKLcijumXaeV4ORK0sJV7YmLRxrwxVW+PoMTNYBd53Jz+l2x6gX8mUg3kW1nfIsfaNwnP+Jw==",
+      "path": "humanizer.core.sk/2.6.2",
+      "hashPath": "humanizer.core.sk.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.sl/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Cjw68X+vldnPvKREf4/jxzoAO+7IVZj3GOe3PoWZRK2RpKfcv4OJVWWNsjL0YM/O5Nf3XikRwkSd6BEmwp4icw==",
+      "path": "humanizer.core.sl/2.6.2",
+      "hashPath": "humanizer.core.sl.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.sr/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+byCYvYq/w/5/2gi0WnchcP5kOow8bjQclIbhpk039rv9SFjFrjHE5PbFCwlwgdDZ85we9XK+UeJ/Qmy0BeDdA==",
+      "path": "humanizer.core.sr/2.6.2",
+      "hashPath": "humanizer.core.sr.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.sr-Latn/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LUs+TjMrCyfhmDAXnswIln8rCzHMFhnqeKkLcDUMVjDeAeAZfAaFgBgaWVFcQSIuyefv6/IGl1Y/Awe/XdlmWQ==",
+      "path": "humanizer.core.sr-latn/2.6.2",
+      "hashPath": "humanizer.core.sr-latn.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.sv/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CNjGjFy6no3sKBqgqi7RFT82Syp/j730fRdsNJ6btOqQ0+y+FnJ7yz0l8TDPUam2zM2C/Je9CEcxtqk1XT++nA==",
+      "path": "humanizer.core.sv/2.6.2",
+      "hashPath": "humanizer.core.sv.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.tr/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l44WGi5EHRB2I7HI1Q7V+U1gzwa11p/zpm/p/FZbQbYJTJ/pJb4LfV8ckxLgySEYKwNpvaE9OAQXkHEhVbydSA==",
+      "path": "humanizer.core.tr/2.6.2",
+      "hashPath": "humanizer.core.tr.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.uk/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WGyiTaSbtjKRAl6AKBaDfMqMXf8G8SleB+IsR2dg1uMw169aU4Z50sXfseAAg31L1uTA+iA83Mj62Mq7tR087g==",
+      "path": "humanizer.core.uk/2.6.2",
+      "hashPath": "humanizer.core.uk.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.uz-Cyrl-UZ/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zKtrGdQhWIFcM2kE4h2iPAkzGpHJQ3jPrDt+4JcOUC6l4FcZfGVjOIEwqPf3ziu0fcou8PgQWsI4jZclt17mJA==",
+      "path": "humanizer.core.uz-cyrl-uz/2.6.2",
+      "hashPath": "humanizer.core.uz-cyrl-uz.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.uz-Latn-UZ/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P1Wd032Ws/2Uj7TMxOjFmEMHP4R070dt2hPp/EjwoNCWONNpmbDG17A8kFzoHqzUTykvTYoUmm81ffaTt9CBmw==",
+      "path": "humanizer.core.uz-latn-uz/2.6.2",
+      "hashPath": "humanizer.core.uz-latn-uz.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.vi/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zhx8Hn6/7efz3jb/9uAxr6bQhGCH4FV7j4q6ulpyUIN4glp8x3z+ID5NPP2dcOC7XxaF+Iu8dKc8yBOn/LCYnw==",
+      "path": "humanizer.core.vi/2.6.2",
+      "hashPath": "humanizer.core.vi.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.zh-CN/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6MY2F/6K+IP/oR6zEEzp69ZV83ylJ8CFZVUy5FqiZaUxkql4gXBxuZBNZbJyinOweHtVSpTIZr06WA/yQVnDqQ==",
+      "path": "humanizer.core.zh-cn/2.6.2",
+      "hashPath": "humanizer.core.zh-cn.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.zh-Hans/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ujlQ5QAuhWp8dqmxHAVCFCOqNWr7gLyOsSX6HNk/imhjZ6beIOqZJzMrt+SFhf26gKRrnMSb+Y77Fe4zKl21lA==",
+      "path": "humanizer.core.zh-hans/2.6.2",
+      "hashPath": "humanizer.core.zh-hans.2.6.2.nupkg.sha512"
+    },
+    "Humanizer.Core.zh-Hant/2.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qHdARGfuum6DUPuYzLHfTIgtprO76VcatBAu1WWPzNZmEW0vLE1/VJYBob20hq66KggzWY74roU33+SryTnaAQ==",
+      "path": "humanizer.core.zh-hant/2.6.2",
+      "hashPath": "humanizer.core.zh-hant.2.6.2.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EJWaxi2bI47iEZen/nZkJEDZCrP9Oj3PJtMwBv34Z0ZvvdSkpgsdqlHSud8d5vC53LnCXLfBLewfqHcILDVSDw==",
+      "path": "microsoft.codeanalysis.csharp.workspaces/2.8.0",
+      "hashPath": "microsoft.codeanalysis.csharp.workspaces.2.8.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.Workspaces.Common/2.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tJlJ99SD8bHBAXShOG/pXQ1K118cnsF01obEf9aAtdgLbw3yEPahZ7qvWeGMjrheUhvOsSkv/wTKYg9euKa8MQ==",
+      "path": "microsoft.codeanalysis.workspaces.common/2.8.0",
+      "hashPath": "microsoft.codeanalysis.workspaces.common.2.8.0.nupkg.sha512"
+    },
     "Microsoft.CodeCoverage/16.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-W7WI3iH6At2I/9x2ODgCIIMO0QfpA7ZCoHkeygMLAaz3Nms/GsugKz9N4hkTve2Lj66g2K4CAmbwe6utEH66lw==",
       "path": "microsoft.codecoverage/16.0.1",
       "hashPath": "microsoft.codecoverage.16.0.1.nupkg.sha512"
+    },
+    "Microsoft.Data.Sqlite.Core/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-69DJj8bUJpXPfWpmJ/Sh165GWjLjlL516l0GnJDImabfR+leXb61HaQF97THWvyx5yY7MvpO94QW5nyiXMVOAA==",
+      "path": "microsoft.data.sqlite.core/2.2.4",
+      "hashPath": "microsoft.data.sqlite.core.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aQ0sAe2mOtSp3StjKT2wDA/BO3k8BLfpIXIG1MOlGytjQWQOvW3BzDPfgXOhxbSa7Bhdsx97aYzZUGD3DQAQjQ==",
+      "path": "microsoft.entityframeworkcore/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GjtIOANlpy7JcGK0Q169n52713hIHHfxUHq1+xoWlAZYSI0h/n2DrEWwCIsrnInU8FaLq4cIG7UgMTL0CnUUPw==",
+      "path": "microsoft.entityframeworkcore.abstractions/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cLJo6dikdFQd2j9cFHhC2M1rzUeYvJLR/m7cBcuKRI6ek5t5ZyGZ0hzEJwCQmKRDV4tAl5p+NIrfDjfqTK8POw==",
+      "path": "microsoft.entityframeworkcore.analyzers/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4YQxumfj7SOdL3wQFo+cT+KHnH5ox1MSyZ36IrOcx1NM+LG4J+n+zSNMFgqmv1p17hBr5unNnECnJQiHSg6lqw==",
+      "path": "microsoft.entityframeworkcore.inmemory/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ga+kJhoSBNYv8C2gQl2sB5bTBkWsLFn92CPjZA5ql/MyxJTWri6lf44/GSYEcOQj0tqF5HhMAaB1HxQMiIPBcQ==",
+      "path": "microsoft.entityframeworkcore.relational/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.relational.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SfDyGsk8S+EN/VTli9zOSwzoPkNOTKJ1dzZtXKXZiaDb9OmDxW8mQsKPW8A1CTiZx+/2ACVb8Moc2Sw3cIt6xQ==",
+      "path": "microsoft.entityframeworkcore.sqlite/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RezSS0Tli9yfjIJIrwyB334gHymL6/Oy9YM47NyE4kCT0eLkZjs4VKptnX6Pvl8+12oP1gTDvuYZhrhpxfOFoA==",
+      "path": "microsoft.entityframeworkcore.sqlite.core/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.core.2.2.4.nupkg.sha512"
     },
     "Microsoft.NET.Test.Sdk/16.0.1": {
       "type": "package",
@@ -443,12 +1733,131 @@
       "path": "microsoft.testplatform.testhost/16.0.1",
       "hashPath": "microsoft.testplatform.testhost.16.0.1.nupkg.sha512"
     },
+    "Microsoft.VisualStudio.Web.CodeGeneration/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wc71c9HWTeXy9/w9O4Yr2LKmdJjVyIoJ/XQX8/6uma4EAVU25RLtUWlvhA0gpgFw9Kf1TkCv70x+CbKnRw/d8Q==",
+      "path": "microsoft.visualstudio.web.codegeneration/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wXlpxDfRD5aPypa0p0UE97tkRQvAz9D9FfA2GITzr+LlGIpybyGnxkwGVp0Vha1Ibr0kJG0HdnqfeHME/WuAcQ==",
+      "path": "microsoft.visualstudio.web.codegeneration.contracts/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.contracts.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Core/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-APdPavBUYcGPBaW4rjxBVRePWmg0ZzhIRymOzvLFWUtzfvJKw1+8PaCzsH7Uvl+felm0L1UVQwBx1Do0R7j7Xg==",
+      "path": "microsoft.visualstudio.web.codegeneration.core/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.core.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Design/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xH50cYOU+infRq4KikBuu2qeXcwW4tE0D5TDfKLuLrEtDm90aXI+0qygPsqyISf+lOW7L7rQ64BH/dRYkK3c3Q==",
+      "path": "microsoft.visualstudio.web.codegeneration.design/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.design.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N9S7TeFZjXzNY9OVbz4OFw9cM9oEeMaCnuLFhetNioy/wPwZbgglrctAEYxfDbvocQ17YCAVR2EMRbYHNDHyVg==",
+      "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.entityframeworkcore.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sW2lHnOoL1xFnSm/2zSedeUoQPlbhPfWjSuUYsxYUj/N5QmLmH98ZLaqP26k6Om/heR6Gux/veXI96yM1Parow==",
+      "path": "microsoft.visualstudio.web.codegeneration.templating/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.templating.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/r/y+XpOpbCwN/M/HopjfGTDRlmixTd4G6HG6FaBkD/YF3T1u+4WMRVtuB6zz7aw571HmX+6UokEa6HJSwkPDA==",
+      "path": "microsoft.visualstudio.web.codegeneration.utils/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegeneration.utils.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/2.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0gVuA4KUCHFM4M/9SjG+7j7BzZ7SW/BufF97Q78i2VV8JBbQXc/5Rf6YUG1VGW2fwSEOl9+S26utEGS+86GGGw==",
+      "path": "microsoft.visualstudio.web.codegenerators.mvc/2.2.3",
+      "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.2.3.nupkg.sha512"
+    },
     "Microsoft.Win32.Primitives/4.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-fQnBHO9DgcmkC9dYSJoBqo6sH1VJwJprUHh8F3hbcRlxiQiBUuTntdk8tUwV490OqC2kQUrinGwZyQHTieuXRA==",
       "path": "microsoft.win32.primitives/4.0.1",
       "hashPath": "microsoft.win32.primitives.4.0.1.nupkg.sha512"
+    },
+    "NuGet.Frameworks/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qbXaB76XYUVLocLBs8Z9TS/ERGK2wm797feO+0JEPFvT7o7MRadOR77mqaSD4J1k8G+DlZQyq+MlkCuxrkr3ag==",
+      "path": "nuget.frameworks/4.7.0",
+      "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
+    },
+    "Remotion.Linq/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
+      "path": "remotion.linq/2.2.0",
+      "hashPath": "remotion.linq.2.2.0.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_green/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U5lZv+E0JBCG5uQngaRgyIAlbzIwRczb0m46XJfLGXovtfVOaMNRY/oGyKAJjdexVrfqLRd+JyopGMySpAZRGQ==",
+      "path": "sqlitepclraw.bundle_green/1.1.12",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.12.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S4hr+tE275ran5jyKFW/FYPG6Bz6nsHUp9H8chqKxzk21PxJadLd9LnvLe6LMRP/IqY5+LOIIDQF3m/2iDlZ7Q==",
+      "path": "sqlitepclraw.core/1.1.12",
+      "hashPath": "sqlitepclraw.core.1.1.12.nupkg.sha512"
+    },
+    "SQLitePCLRaw.lib.e_sqlite3.linux/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Tn/YE1VxWtHa4MQ9KC//ptIw6cLAUh+xXSdpX7MyGINmb4/igqyx0IOEq5WeH/+cuI/EnDtdWAOn98eMQnKsTQ==",
+      "path": "sqlitepclraw.lib.e_sqlite3.linux/1.1.12",
+      "hashPath": "sqlitepclraw.lib.e_sqlite3.linux.1.1.12.nupkg.sha512"
+    },
+    "SQLitePCLRaw.lib.e_sqlite3.osx/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qfl1ljn6NOQDyM2i9JDZc6xekHoC+Fqe4GzuhWFCS6siI7lLInw09HHSZRqyimV36vjdQYnyBBFKSn53rSOYkA==",
+      "path": "sqlitepclraw.lib.e_sqlite3.osx/1.1.12",
+      "hashPath": "sqlitepclraw.lib.e_sqlite3.osx.1.1.12.nupkg.sha512"
+    },
+    "SQLitePCLRaw.lib.e_sqlite3.v110_xp/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YfmaVhcEyAGU6BZ7NQiYYfCHKsCYjldwsafiFKArzqeM8MHuhfqft1Fjdv7ncukXrvKsHXhCrzJzKEMwPXiSSg==",
+      "path": "sqlitepclraw.lib.e_sqlite3.v110_xp/1.1.12",
+      "hashPath": "sqlitepclraw.lib.e_sqlite3.v110_xp.1.1.12.nupkg.sha512"
+    },
+    "SQLitePCLRaw.provider.e_sqlite3.netstandard11/1.1.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qjz6Ad1Q5hiI8imCiG5Mpa/w8E8+rAk3SRJdX54uEOo5nPywiN1H0jmMZO+ID0nPibQA3yjlAHt5/GcLW9Iftg==",
+      "path": "sqlitepclraw.provider.e_sqlite3.netstandard11/1.1.12",
+      "hashPath": "sqlitepclraw.provider.e_sqlite3.netstandard11.1.1.12.nupkg.sha512"
+    },
+    "System.Collections.Immutable/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
+      "path": "system.collections.immutable/1.5.0",
+      "hashPath": "system.collections.immutable.1.5.0.nupkg.sha512"
     },
     "System.ComponentModel/4.0.1": {
       "type": "package",
@@ -478,6 +1887,48 @@
       "path": "system.componentmodel.typeconverter/4.1.0",
       "hashPath": "system.componentmodel.typeconverter.4.1.0.nupkg.sha512"
     },
+    "System.Composition/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I+D26qpYdoklyAVUdqwUBrEIckMNjAYnuPJy/h9dsQItpQwVREkDFs4b4tkBza0kT2Yk48Lcfsv2QQ9hWsh9Iw==",
+      "path": "system.composition/1.0.31",
+      "hashPath": "system.composition.1.0.31.nupkg.sha512"
+    },
+    "System.Composition.AttributedModel/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NHWhkM3ZkspmA0XJEsKdtTt1ViDYuojgSND3yHhTzwxepiwqZf+BCWuvCbjUt4fe0NxxQhUDGJ5km6sLjo9qnQ==",
+      "path": "system.composition.attributedmodel/1.0.31",
+      "hashPath": "system.composition.attributedmodel.1.0.31.nupkg.sha512"
+    },
+    "System.Composition.Convention/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GLjh2Ju71k6C0qxMMtl4efHa68NmWeIUYh4fkUI8xbjQrEBvFmRwMDFcylT8/PR9SQbeeL48IkFxU/+gd0nYEQ==",
+      "path": "system.composition.convention/1.0.31",
+      "hashPath": "system.composition.convention.1.0.31.nupkg.sha512"
+    },
+    "System.Composition.Hosting/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fN1bT4RX4vUqjbgoyuJFVUizAl2mYF5VAb+bVIxIYZSSc0BdnX+yGAxcavxJuDDCQ1K+/mdpgyEFc8e9ikjvrg==",
+      "path": "system.composition.hosting/1.0.31",
+      "hashPath": "system.composition.hosting.1.0.31.nupkg.sha512"
+    },
+    "System.Composition.Runtime/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0LEJN+2NVM89CE4SekDrrk5tHV5LeATltkp+9WNYrR+Huiyt0vaCqHbbHtVAjPyeLWIc8dOz/3kthRBj32wGQg==",
+      "path": "system.composition.runtime/1.0.31",
+      "hashPath": "system.composition.runtime.1.0.31.nupkg.sha512"
+    },
+    "System.Composition.TypedParts/1.0.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0Zae/FtzeFgDBBuILeIbC/T9HMYbW4olAmi8XqqAGosSOWvXfiQLfARZEhiGd0LVXaYgXr0NhxiU1LldRP1fpQ==",
+      "path": "system.composition.typedparts/1.0.31",
+      "hashPath": "system.composition.typedparts.1.0.31.nupkg.sha512"
+    },
     "System.Diagnostics.Process/4.1.0": {
       "type": "package",
       "serviceable": true,
@@ -498,6 +1949,27 @@
       "sha512": "sha512-6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
       "path": "system.diagnostics.tracesource/4.0.0",
       "hashPath": "system.diagnostics.tracesource.4.0.0.nupkg.sha512"
+    },
+    "System.Interactive.Async/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C07p0dAA5lGqYUPiPCK3paR709gqS4aMDDsje0v0pvffwzLaxmsn5YQTfZbyNG5qrudPx+BCxTqISnncQ3wIoQ==",
+      "path": "system.interactive.async/3.2.0",
+      "hashPath": "system.interactive.async.3.2.0.nupkg.sha512"
+    },
+    "System.Linq.Parallel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
+      "path": "system.linq.parallel/4.3.0",
+      "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Queryable/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "path": "system.linq.queryable/4.0.1",
+      "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "System.Runtime.Loader/4.0.0": {
       "type": "package",
@@ -584,6 +2056,16 @@
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
     "EttvAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EttvAPI.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EttvAPI.Repos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
