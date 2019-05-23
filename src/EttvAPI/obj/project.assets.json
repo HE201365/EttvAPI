@@ -5270,7 +5270,6 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Humanizer": "2.6.2",
-          "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
         },
         "compile": {
