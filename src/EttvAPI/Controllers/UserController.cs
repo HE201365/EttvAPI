@@ -10,19 +10,20 @@ namespace EttvAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly LoginService _loginService;
         private readonly IMapper _mapper;
 
-        public LoginController(ILoginService loginService, IMapper mapper)
+        public UserController(ILoginService loginService, IMapper mapper)
         {
             _loginService = loginService as LoginService;
             _mapper = mapper;
         }
 
-        // Post: api/Login
+        // Post: api/User
         [HttpPost]
+        [Route("Login")]
         public  ActionResult Post([FromBody] LoginModel model)
         {
             if (!ModelState.IsValid)

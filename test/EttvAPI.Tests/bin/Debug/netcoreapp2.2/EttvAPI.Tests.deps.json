@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "cfb8a5de76658394e7e227f83c47e865a8b4b842"
+    "signature": "256de5f883d9e0a8229896a6f70994d4c9af9084"
   },
   "compilationOptions": {},
   "targets": {
@@ -512,6 +512,17 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Mvc.Core/2.2.5": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyModel": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.19109"
+          }
+        }
+      },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Workspaces.Common": "2.8.0"
@@ -551,6 +562,14 @@
           "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {
             "assemblyVersion": "2.2.4.0",
             "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.DotNet.PlatformAbstractions.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -609,12 +628,35 @@
       "Microsoft.EntityFrameworkCore.Sqlite.Core/2.2.4": {
         "dependencies": {
           "Microsoft.Data.Sqlite.Core": "2.2.4",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.4"
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4",
+          "Microsoft.Extensions.DependencyModel": "2.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {
             "assemblyVersion": "2.2.4.0",
             "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.SqlServer/2.2.4": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
+            "assemblyVersion": "2.2.4.0",
+            "fileVersion": "2.2.4.19081"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/2.1.0": {
+        "dependencies": {
+          "Microsoft.DotNet.PlatformAbstractions": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -732,6 +774,7 @@
       },
       "Microsoft.TestPlatform.TestHost/16.0.1": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyModel": "2.1.0",
           "Microsoft.TestPlatform.ObjectModel": "16.0.1"
         },
         "runtime": {
@@ -1291,7 +1334,9 @@
       },
       "EttvAPI.Data/1.0.0": {
         "dependencies": {
-          "Humanizer": "2.6.2"
+          "Humanizer": "2.6.2",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4"
         },
         "runtime": {
           "EttvAPI.Data.dll": {}
@@ -1635,6 +1680,13 @@
       "path": "humanizer.core.zh-hant/2.6.2",
       "hashPath": "humanizer.core.zh-hant.2.6.2.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Mvc.Core/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/8sr8ixIUD57UFwUntha9bOwex7/AkZfdk1f9oNJG1Ek7p/uuKVa7fuHmYZpQOf35Oxrt+2Ku4WPwMSbNxOuWg==",
+      "path": "microsoft.aspnetcore.mvc.core/2.2.5",
+      "hashPath": "microsoft.aspnetcore.mvc.core.2.2.5.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -1662,6 +1714,13 @@
       "sha512": "sha512-69DJj8bUJpXPfWpmJ/Sh165GWjLjlL516l0GnJDImabfR+leXb61HaQF97THWvyx5yY7MvpO94QW5nyiXMVOAA==",
       "path": "microsoft.data.sqlite.core/2.2.4",
       "hashPath": "microsoft.data.sqlite.core.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9KPDwvb/hLEVXYruVHVZ8BkebC8j17DmPb56LnqRF74HqSPLjCkrlFUjOtFpQPA2DeADBRTI/e69aCfRBfrhxw==",
+      "path": "microsoft.dotnet.platformabstractions/2.1.0",
+      "hashPath": "microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/2.2.4": {
       "type": "package",
@@ -1711,6 +1770,20 @@
       "sha512": "sha512-RezSS0Tli9yfjIJIrwyB334gHymL6/Oy9YM47NyE4kCT0eLkZjs4VKptnX6Pvl8+12oP1gTDvuYZhrhpxfOFoA==",
       "path": "microsoft.entityframeworkcore.sqlite.core/2.2.4",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer/2.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-e0rW3jJXunnwUCout+lQicDoyviO53qsuawZa/HZsfRoEF/bWGlGTJxUN0MPZVQkEd5Gx8ypdDSRbGHtrQp/SA==",
+      "path": "microsoft.entityframeworkcore.sqlserver/2.2.4",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.4.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyModel/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nS2XKqi+1A1umnYNLX2Fbm/XnzCxs5i+zXVJ3VC6r9t2z0NZr9FLnJN4VQpKigdcWH/iFTbMuX6M6WQJcTjVIg==",
+      "path": "microsoft.extensions.dependencymodel/2.1.0",
+      "hashPath": "microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512"
     },
     "Microsoft.NET.Test.Sdk/16.0.1": {
       "type": "package",

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EttvAPI.Data.Models
@@ -19,7 +21,11 @@ namespace EttvAPI.Data.Models
         [Required]
         [Column(TypeName = "binary(50)")]
         public string HashPassword { get; set; }
+        public int ProfileId { get; set; }
         [Required] 
         public Profile Profile { get; set; }
+
+        public ICollection<VideoContent> VideoContents { get; set; }
+        public ICollection<ChannelProgram> ChannelPrograms { get; set; }
     }
 }

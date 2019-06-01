@@ -16,9 +16,20 @@ namespace EttvAPI.Data.Models
 
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<VideoContent> VideoContents { get; set; }
+        public DbSet<ChannelProgram> ChannelPrograms { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<ChannelProgram>()
+                .Property(b => b.ModifiedAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            modelBuilder.Entity<VideoContent>()
+                .HasOne(a => a.AppUser)
+                .WithMany(v => v.VideoContents)
+                .OnDelete(DeleteBehavior.SetNull);
             // Singularize table name
             // Blogs => Blog
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())

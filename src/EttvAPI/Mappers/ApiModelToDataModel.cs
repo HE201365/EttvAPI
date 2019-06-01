@@ -14,6 +14,7 @@ namespace EttvAPI.Mappers
         {
             CreateMap<AppUserModel, AppUser>();
             CreateMap<ProfileModel, Data.Models.Profile>();
+            CreateMap<VideoContentModel, VideoContent>();
         }
     }
 }

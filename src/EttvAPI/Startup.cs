@@ -36,6 +36,7 @@ namespace EttvAPI
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<IAppUserService, AppUserService>();
             services.AddScoped<IProfileService, ProfileService>();
+            services.AddScoped<IVideoContentService, VideoContentService>();
 
             services.AddAutoMapper();
         }

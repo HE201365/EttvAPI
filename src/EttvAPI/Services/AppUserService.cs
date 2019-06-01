@@ -2,28 +2,29 @@
 using System.Collections.Generic;
 using EttvAPI.Data.Models;
 using EttvAPI.Models;
+using EttvAPI.Services.Communication;
 using EttvAPI.Services.Interfaces;
 
 namespace EttvAPI.Services
 {
     public class AppUserService : IAppUserService
     {
-        public AppUserModel DeleteAsync(int id)
+        public IEnumerable<AppUser> List()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<AppUser> ListAsync()
+        public AppUserResponce Save(AppUser appUser)
         {
             throw new NotImplementedException();
         }
 
-        public AppUserModel SaveAsync(AppUser appUser)
+        public AppUserResponce Update(int id, AppUser appUser)
         {
             throw new NotImplementedException();
         }
 
-        public AppUserModel UpdateAsync(int id, AppUser appUser)
+        public AppUserResponce Delete(int id)
         {
             throw new NotImplementedException();
         }
