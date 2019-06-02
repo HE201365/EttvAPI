@@ -67,14 +67,32 @@ namespace EttvAPI.Controllers
 
         // PUT api/VideoContent/M7lc1UVf-VE
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult Put(string id, [FromBody] VideoContentModel model)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var videoContent = _mapper.Map<VideoContentModel, VideoContent>(model);
+            var result = _videoContentService.Update(id,videoContent);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var videoContentModel = _mapper.Map<VideoContent, VideoContentModel>(result.VideoContent);
+            return Ok(videoContentModel);
         }
 
         // DELETE api/VideoContent/M7lc1UVf-VE
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(string id)
         {
+            var result = _videoContentService.Delete(id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var videoContentModel = _mapper.Map<VideoContent, VideoContentModel>(result.VideoContent);
+            return Ok(videoContentModel);
         }
     }
 }

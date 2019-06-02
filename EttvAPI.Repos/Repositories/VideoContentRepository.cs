@@ -23,5 +23,10 @@ namespace EttvAPI.Repos.Repositories
         {
             return _dbContext.VideoContents.Find(videoId);
         }
+
+        public override void Delete(VideoContent entity)
+        {
+            base.Delete(entity);
+        }
     }
 }

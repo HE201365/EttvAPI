@@ -15,10 +15,10 @@ namespace EttvAPI.Repos.Repositories
             appUserRepository = new AppUserRepository(this._dbContext);
             videoContentRepository = new VideoContentRepository(this._dbContext);
         }
-        public void Dispose()
-        {
-            _dbContext.Dispose();
-        }
+        //public void Dispose()
+        //{
+        //    _dbContext.Dispose();
+        //}
 
         public async Task Commit()
         {

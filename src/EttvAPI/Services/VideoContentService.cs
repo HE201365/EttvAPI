@@ -39,12 +39,46 @@ namespace EttvAPI.Services
 
         public VideoContentResponce Update(string videoId, VideoContent videoContent)
         {
-            throw new NotImplementedException();
+            var existingVideo = _unitOfWork.videoContentRepository.GetByStringId(videoId);
+
+            if(existingVideo == null)
+                return new VideoContentResponce("Video Content not found.");
+
+            existingVideo.Tag = videoContent.Tag;
+
+            try
+            {
+                _unitOfWork.videoContentRepository.Update(existingVideo);
+                _unitOfWork.Commit();
+                
+                return new VideoContentResponce(existingVideo);
+            }
+            catch (Exception ex)
+            {
+                //TODO some logging stuff here
+                return new VideoContentResponce($"An error occurred when updating the VideoContents Tag: {ex.Message}");
+            }
         }
 
         public VideoContentResponce Delete(string videoId)
         {
-            throw new NotImplementedException();
+            var existVideo = _unitOfWork.videoContentRepository.GetByStringId(videoId);
+
+            if(existVideo == null)
+                return new VideoContentResponce("Video not found.");
+
+            try
+            {
+                _unitOfWork.videoContentRepository.Delete(existVideo);
+                _unitOfWork.Commit();
+
+                return new VideoContentResponce(existVideo);
+            }
+            catch (Exception ex)
+            {
+                //TODO some logging stuff here
+                return new VideoContentResponce($"An error occurred when updating the VideoContents Tag: {ex.Message}");
+            }
         }
     }
 }

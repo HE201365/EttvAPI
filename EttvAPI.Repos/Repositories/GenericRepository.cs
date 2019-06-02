@@ -38,7 +38,7 @@ namespace EttvAPI.Repos.Repositories
             this._dbContext.Entry(entity).State = EntityState.Modified;
         }
 
-        public void Delete(T entity)
+        public virtual void Delete(T entity)
         {
             this._dbSet.Remove(entity);
         }
