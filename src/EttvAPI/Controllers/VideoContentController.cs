@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using EttvAPI.Data.Models;
@@ -8,7 +7,6 @@ using EttvAPI.Models;
 using EttvAPI.Services;
 using EttvAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal;
 
 namespace EttvAPI.Controllers
 {
@@ -24,6 +22,7 @@ namespace EttvAPI.Controllers
             _videoContentService = videoContentService as VideoContentService;
             _mapper = mapper;
         }
+
         // GET api/VideoContent
         [HttpGet]
         public ActionResult Index()
@@ -36,9 +35,10 @@ namespace EttvAPI.Controllers
                 var videoContentM = _mapper.Map<VideoContent, VideoContentModel>(result);
                 models.Add(videoContentM);
             }
-            //var appUserModel = _mapper.Map<VideoContentModel, VideoContent>();
+
             return Ok(models);
         }
+
         // GET api/VideoContent/M7lc1UVf-VE
         [HttpGet("{id}")]
         public ActionResult Index(string id)

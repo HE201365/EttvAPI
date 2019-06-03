@@ -9,11 +9,13 @@ namespace EttvAPI.Repos.Repositories
         private readonly EttvDbContext _dbContext;
         public AppUserRepository appUserRepository { get; private set; }
         public VideoContentRepository videoContentRepository { get; private set; }
+        public ChannelProgramRepository channelProgramRepository { get; private set; }
         public UnitOfWork(EttvDbContext context)
         {
             _dbContext = context;
             appUserRepository = new AppUserRepository(this._dbContext);
             videoContentRepository = new VideoContentRepository(this._dbContext);
+            channelProgramRepository = new ChannelProgramRepository(this._dbContext);
         }
         //public void Dispose()
         //{

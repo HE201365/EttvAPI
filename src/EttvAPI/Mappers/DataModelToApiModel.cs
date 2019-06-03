@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using EttvAPI.Data.Models;
+﻿using EttvAPI.Data.Models;
 using EttvAPI.Models;
 using Profile = AutoMapper.Profile;
 
@@ -15,6 +11,7 @@ namespace EttvAPI.Mappers
             CreateMap<AppUser,AppUserModel>();
             CreateMap<Data.Models.Profile,ProfileModel>();
             CreateMap<VideoContent, VideoContentModel>();
+            CreateMap<ChannelProgram, ChannelProgramModel>();
         }
     }
 }

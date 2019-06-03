@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using EttvAPI.Data.Models;
-using EttvAPI.Models;
 using EttvAPI.Repos.Interfaces.Repositories;
 using EttvAPI.Repos.Repositories;
 using EttvAPI.Services.Communication;
@@ -77,7 +76,7 @@ namespace EttvAPI.Services
             catch (Exception ex)
             {
                 //TODO some logging stuff here
-                return new VideoContentResponce($"An error occurred when updating the VideoContents Tag: {ex.Message}");
+                return new VideoContentResponce($"An error occurred when Deleting the video content: {ex.Message}");
             }
         }
     }

@@ -30,6 +30,12 @@ namespace EttvAPI.Data.Models
                 .HasOne(a => a.AppUser)
                 .WithMany(v => v.VideoContents)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            //modelBuilder.Entity<ChannelProgram>()
+            //    .HasOne(v => v.VideoContent)
+            //    .WithMany(c => c.ChannelPrograms)
+            //    .HasForeignKey(x=>x.VideoContentVideoId);
+
             // Singularize table name
             // Blogs => Blog
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())

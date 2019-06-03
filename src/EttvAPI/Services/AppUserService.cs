@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using EttvAPI.Data.Models;
-using EttvAPI.Models;
 using EttvAPI.Services.Communication;
 using EttvAPI.Services.Interfaces;
 
