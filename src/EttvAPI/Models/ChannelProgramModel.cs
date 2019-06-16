@@ -13,5 +13,6 @@ namespace EttvAPI.Models
         public DateTime ModifiedAt { get; set; }
         public int AppUserId { get; set; }
         public string VideoContentVideoId { get; set; }
+        public VideoContentModel VideoContent { get; set; }
     }
 }
