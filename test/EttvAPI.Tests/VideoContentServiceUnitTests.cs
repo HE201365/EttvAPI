@@ -3,6 +3,7 @@ using System.Linq;
 using EttvAPI.Data.Models;
 using EttvAPI.Repos.Repositories;
 using EttvAPI.Services;
+using Microsoft.AspNetCore.Mvc.Razor.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
@@ -10,41 +11,6 @@ namespace EttvAPI.Tests
 {
     public class VideoContentServiceUnitTests
     {
-        [Fact]
-        public void ShouldBeReturnAllVideoContents()
-        {
-            var options = new DbContextOptionsBuilder<EttvDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var context = new EttvDbContext(options);
-
-            Seed(context);
-
-            var query = context.VideoContents
-                .OrderBy(a => a.Tag)
-                .ToList();
-
-            Assert.Equal(3, query.Count);
-        }
-
-        [Fact]
-        public void ShouldBOrderVideoContentsByTitle()
-        {
-            var options = new DbContextOptionsBuilder<EttvDbContext>()
-                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
-                .Options;
-            var context = new EttvDbContext(options);
-
-            Seed(context);
-
-            var query = context.VideoContents
-                .OrderBy(a => a.Title)
-                .ToList();
-
-            Assert.Equal("title1", query.First().Title);
-            Assert.Equal("title3", query.Last().Title);
-        }
-
         [Fact]
         public void ShouldResturnVideoContents()
         {
@@ -57,10 +23,79 @@ namespace EttvAPI.Tests
 
             var videocontentservice = new VideoContentService(unitOfWork: new UnitOfWork(context));
 
-            var list = videocontentservice.List();
-            
-            Assert.Equal("title1", videocontentservice.List().Where(x=>x.VideoId=="videoId1").SingleOrDefault().Title);
+            Assert.Equal("title1", videocontentservice.List().Where(x => x.VideoId == "videoId1").SingleOrDefault().Title);
             Assert.Equal("title3", videocontentservice.List().Where(x => x.VideoId == "videoId3").LastOrDefault().Title);
+        }
+
+        [Fact]
+        public void ShouldBeReturnResultsAfterAddOneVideoContent()
+        {
+            var options = new DbContextOptionsBuilder<EttvDbContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .Options;
+            var context = new EttvDbContext(options);
+
+            Seed(context);
+
+            var videocontentservice = new VideoContentService(unitOfWork: new UnitOfWork(context));
+
+            VideoContent vc = new VideoContent
+            {
+                VideoId = "videoId4",
+                Title = "title4",
+                Thumbnail = "thumbnail4",
+                Tag = "tag4",
+                AppUserId = 1,
+                Duration = 1000
+            };
+
+            Assert.Equal(vc, videocontentservice.Save(vc).VideoContent);
+            Assert.Equal(4, videocontentservice.List().Count());
+        }
+
+        [Fact]
+        public void ShouldBeReturnResultsAfterUpdateOneVideoContent()
+        {
+            var options = new DbContextOptionsBuilder<EttvDbContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .Options;
+            var context = new EttvDbContext(options);
+
+            Seed(context);
+
+            var videocontentservice = new VideoContentService(unitOfWork: new UnitOfWork(context));
+
+            VideoContent vc = new VideoContent
+            {
+                VideoId = "videoId3",
+                Title = "title3",
+                Thumbnail = "thumbnail3",
+                Tag = "tag3_Updated",
+                AppUserId = 2,
+                Duration = 3000
+            };
+
+            Assert.Equal(vc.Tag, videocontentservice.Update("videoId3",vc).VideoContent.Tag);
+            Assert.Equal(vc.Title, videocontentservice.Update("videoId3",vc).VideoContent.Title);
+        }
+
+        [Fact]
+        public void ShouldBeReturnResultsAfterDeleteOneVideoContent()
+        {
+            var options = new DbContextOptionsBuilder<EttvDbContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+                .Options;
+            var context = new EttvDbContext(options);
+
+            Seed(context);
+
+            var videocontentservice = new VideoContentService(unitOfWork: new UnitOfWork(context));
+
+            VideoContent vc = videocontentservice.Delete("videoId1").VideoContent;
+
+            Assert.Equal("tag1",vc.Tag);
+            Assert.Equal("title1",vc.Title);
+            Assert.Equal(2, videocontentservice.List().Count());
         }
 
         private void Seed(EttvDbContext context)
