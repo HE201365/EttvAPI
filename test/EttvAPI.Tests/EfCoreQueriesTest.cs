@@ -3,7 +3,6 @@ using System.Linq;
 using EttvAPI.Controllers;
 using EttvAPI.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.Expressions;
 using Xunit;
 
 namespace EttvAPI.Tests
