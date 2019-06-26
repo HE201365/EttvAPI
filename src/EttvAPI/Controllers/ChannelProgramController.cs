@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using EttvAPI.Data.Models;
@@ -52,7 +53,10 @@ namespace EttvAPI.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] ChannelProgramModel model)
         {
-            if (!ModelState.IsValid)
+           model.StartTime = DateTime.SpecifyKind(model.StartTime, DateTimeKind.Utc);
+           model.EndTime = DateTime.SpecifyKind(model.EndTime, DateTimeKind.Utc);
+
+           if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
             var channelProgram = _mapper.Map<ChannelProgramModel, ChannelProgram>(model);

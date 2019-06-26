@@ -115,7 +115,7 @@ namespace EttvAPI.Data.Migrations
                     b.Property<string>("VideoId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("AppUserId");
+                    b.Property<int>("AppUserId");
 
                     b.Property<int>("Duration");
 
