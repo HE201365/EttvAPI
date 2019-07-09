@@ -9,6 +9,12 @@
     <Compile Remove="Migrations\20190601134152_VideosChannelsAdded.Designer.cs" />
     <Compile Remove="Migrations\20190601134613_VideosChannelsAdded.cs" />
     <Compile Remove="Migrations\20190601134613_VideosChannelsAdded.Designer.cs" />
+    <Compile Remove="Migrations\20190628095615_addingSrcUriAndSrcExtention.cs" />
+    <Compile Remove="Migrations\20190628095615_addingSrcUriAndSrcExtention.Designer.cs" />
+    <Compile Remove="Migrations\20190628100032_addingSrcUriAndSrcExtention.cs" />
+    <Compile Remove="Migrations\20190628100032_addingSrcUriAndSrcExtention.Designer.cs" />
+    <Compile Remove="Migrations\20190628100145_addingSrcUriAndSrcExtention.cs" />
+    <Compile Remove="Migrations\20190628100145_addingSrcUriAndSrcExtention.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

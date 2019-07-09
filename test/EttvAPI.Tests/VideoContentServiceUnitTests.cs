@@ -45,6 +45,8 @@ namespace EttvAPI.Tests
                 Title = "title4",
                 Thumbnail = "thumbnail4",
                 Tag = "tag4",
+                SrcUri = "https://www.youtube.com/watch?v=",
+                SrcExtention = "youtube",
                 AppUserId = 1,
                 Duration = 1000
             };
@@ -71,12 +73,16 @@ namespace EttvAPI.Tests
                 Title = "title3",
                 Thumbnail = "thumbnail3",
                 Tag = "tag3_Updated",
+                SrcUri = "https://www.youtube.com/watch?v=",
+                SrcExtention = "youtube",
                 AppUserId = 2,
                 Duration = 3000
             };
 
             Assert.Equal(vc.Tag, videocontentservice.Update("videoId3",vc).VideoContent.Tag);
             Assert.Equal(vc.Title, videocontentservice.Update("videoId3",vc).VideoContent.Title);
+            Assert.Equal(vc.SrcUri, videocontentservice.Update("videoId3",vc).VideoContent.SrcUri);
+            Assert.Equal(vc.SrcExtention, videocontentservice.Update("videoId3",vc).VideoContent.SrcExtention);
         }
 
         [Fact]
@@ -102,9 +108,9 @@ namespace EttvAPI.Tests
         {
             var videoContents = new[]
             {
-                new VideoContent { VideoId = "videoId1", Title = "title1", Thumbnail = "thumbnail1", Tag = "tag1", AppUserId = 1, Duration = 1000 },
-                new VideoContent { VideoId = "videoId2", Title = "title2", Thumbnail = "thumbnail2", Tag = "tag2", AppUserId = 1, Duration = 2000 },
-                new VideoContent { VideoId = "videoId3", Title = "title3", Thumbnail = "thumbnail3", Tag = "tag3", AppUserId = 2, Duration = 3000 },
+                new VideoContent { VideoId = "videoId1", Title = "title1", Thumbnail = "thumbnail1", Tag = "tag1", AppUserId = 1, SrcUri = "https://www.youtube.com/watch?v=", SrcExtention = "youtube", Duration = 1000},
+                new VideoContent { VideoId = "videoId2", Title = "title2", Thumbnail = "thumbnail2", Tag = "tag2", AppUserId = 1, SrcUri = "https://vimeo.com/", SrcExtention = "vimeo", Duration = 2000 },
+                new VideoContent { VideoId = "videoId3", Title = "title3", Thumbnail = "thumbnail3", Tag = "tag3", AppUserId = 2, SrcUri = "https://www.youtube.com/watch?v=", SrcExtention = "youtube", Duration = 3000 },
             };
 
             var appUser = new[]

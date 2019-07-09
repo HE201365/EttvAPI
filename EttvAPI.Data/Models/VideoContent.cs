@@ -17,6 +17,10 @@ namespace EttvAPI.Data.Models
         public string Tag { get; set; }
         [Required]
         public string Thumbnail { get; set; }
+        [Required]
+        public string SrcUri { get; set; }
+        [Required]
+        public string SrcExtention { get; set; }
         public int AppUserId { get; set; }
         public AppUser AppUser { get; set; }
 
