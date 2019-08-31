@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using EttvAPI.Repos.Repositories;
 using EttvAPI.Services.Communication;
 using EttvAPI.Services.Interfaces;
@@ -18,7 +19,12 @@ namespace EttvAPI.Services
         }
         public IEnumerable<ChannelProgram> List()
         {
-            return _unitOfWork.channelProgramRepository.GetAll();
+            return _unitOfWork.channelProgramRepository.GetAll().Select(c =>
+            {
+                c.StartTime = DateTime.SpecifyKind(c.StartTime, DateTimeKind.Utc);
+                c.EndTime = DateTime.SpecifyKind(c.EndTime, DateTimeKind.Utc);
+                return c;
+            });
         }
 
         public ChannelProgramResponce Save(ChannelProgram channelProgram)

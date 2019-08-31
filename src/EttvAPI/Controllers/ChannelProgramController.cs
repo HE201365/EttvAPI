@@ -46,6 +46,7 @@ namespace EttvAPI.Controllers
         {
             var result = _channelProgramService.List().Where(x => x.Id == id).SingleOrDefault();
             var channelProgramM = _mapper.Map<ChannelProgram, ChannelProgramModel>(result);
+
             return Ok(channelProgramM);
         }
 
