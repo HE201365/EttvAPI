@@ -53,8 +53,8 @@ namespace EttvAPI.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] ChannelProgramModel model)
         {
-           model.StartTime = DateTime.SpecifyKind(model.StartTime, DateTimeKind.Utc);
-           model.EndTime = DateTime.SpecifyKind(model.EndTime, DateTimeKind.Utc);
+           //model.StartTime = DateTime.SpecifyKind(model.StartTime, DateTimeKind.Utc);
+           //model.EndTime = DateTime.SpecifyKind(model.EndTime, DateTimeKind.Utc);
 
            if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
