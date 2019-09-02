@@ -79,6 +79,23 @@ namespace EttvAPI.Controllers
             return Ok(appUserModel);
         }
 
+        // PUT: api/User/5
+        [HttpPut("{id}")]
+        public ActionResult Put(int id, [FromBody] AppUserModel model)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var appUser = _mapper.Map<AppUserModel, AppUser>(model);
+            var result = _appUserService.Update(id, appUser);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var appUserModel = _mapper.Map<AppUser, AppUserModel>(result.AppUser);
+            return Ok(appUserModel);
+        }
+
         // DELETE: api/User/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)

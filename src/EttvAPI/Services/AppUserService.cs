@@ -41,7 +41,25 @@ namespace EttvAPI.Services
 
         public AppUserResponce Update(int id, AppUser appUser)
         {
-            throw new NotImplementedException();
+            var existingUser = _unitOfWork.appUserRepository.GetById(id);
+
+            if (existingUser == null)
+                return new AppUserResponce("User not found.");
+
+            existingUser.ProfileId = appUser.ProfileId;
+
+            try
+            {
+                _unitOfWork.appUserRepository.Update(existingUser);
+                _unitOfWork.Commit();
+
+                return new AppUserResponce(existingUser);
+            }
+            catch (Exception ex)
+            {
+                //TODO some logging stuff here
+                return new AppUserResponce($"An error occurred when updating the Programs Scheduling Time: {ex.Message}");
+            }
         }
 
         public AppUserResponce Delete(int id)
