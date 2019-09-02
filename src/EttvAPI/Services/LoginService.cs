@@ -14,10 +14,10 @@ namespace EttvAPI.Services
         {
             _unitOfWork = unitOfWork as UnitOfWork;
         }
-        
+
         public AppUser UserLogin(LoginModel lonModel)
         {
-            
+
             return _unitOfWork.appUserRepository.CheckUser(lonModel.Email, lonModel.HashPassword);
         }
     }

@@ -21,8 +21,9 @@ namespace EttvAPI.Repos.Repositories
 
         public int AddUser(string lastName, string firstName, string email, string password, int profileId)
         {
-            return _dbContext.Database.ExecuteSqlCommand("AddUser @LastName = {0} @FirstName = {1} @Email = {2} @Passwd = {3} @ProfileId = {4}",
-                lastName, firstName, email, password, profileId );
+            //return _dbContext.Database.ExecuteSqlCommand("AddUser @LastName = {0} @FirstName = {1} @Email = {2} @Passwd = {3} @ProfileId = {4}",
+            return _dbContext.Database.ExecuteSqlCommand("AddUser @p0, @p1, @p2, @p3, @p4",
+                parameters: new List<object> {lastName,firstName,email, password, profileId });
         }
 
         public AppUser CheckUser(string email, string password)
